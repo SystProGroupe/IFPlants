@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="478.0" prefWidth="485.0" style="-fx-background-color: lightgreen; -fx-border-color: green;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbinterface.FXMLDocumentController">
+    <children>
+        <Button id="Refresh" fx:id="Refbutton" layoutX="392.0" layoutY="408.0" onAction="#handleButtonAction" text="Refresh" />
+        <Label id="WaterLevel" fx:id="label" layoutX="39.0" layoutY="41.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="69.0" text="Waterlevel" />
+      <Label fx:id="WaterLabel" layoutX="157.0" layoutY="44.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: LightBlue; -fx-border-color: blue;" />
+      <Label layoutX="191.0" layoutY="14.0" prefHeight="17.0" prefWidth="62.0" text="ID" />
+      <LineChart fx:id="graphLabel" layoutX="14.0" layoutY="222.0" prefHeight="247.0" prefWidth="346.0" style="-fx-border-color: blue;" title="Moisture">
+        <xAxis>
+          <NumberAxis label="Time" prefHeight="40.0" prefWidth="268.0" side="BOTTOM" tickLabelFill="#7645b0" upperBound="50.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Moisture%" side="LEFT" upperBound="75.0" />
+        </yAxis>
+      </LineChart>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="298.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Gladblomma.jpg" />
+         </image>
+      </ImageView>
+    </children>
+   <effect>
+      <Glow />
+   </effect>
+</AnchorPane>
